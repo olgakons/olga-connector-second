@@ -1,0 +1,19 @@
+<mule xmlns="http://www.mulesoft.org/schema/mule/core"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:olga--second="http://www.mulesoft.org/schema/mule/olga--second"
+      xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+          http://www.mulesoft.org/schema/mule/olga--second http://www.mulesoft.org/schema/mule/olga--second/current/mule-olga--second.xsd">
+
+    <olga--second:config name="config" configId="configId">
+        <olga--second:connection requiredParameter="aValue" />
+    </olga--second:config>
+
+    <flow name="sayHiFlow">
+        <olga--second:say-hi person="Mariano Gonzalez"/>
+    </flow>
+
+    <flow name="retrieveInfoFlow">
+        <olga--second:retrieve-info config-ref="config"/>
+    </flow>
+
+</mule>

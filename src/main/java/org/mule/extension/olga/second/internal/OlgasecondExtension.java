@@ -3,6 +3,7 @@ package org.mule.extension.olga.second.internal;
 import org.mule.runtime.extension.api.annotation.Extension;
 import org.mule.runtime.extension.api.annotation.Configurations;
 import org.mule.runtime.extension.api.annotation.dsl.xml.Xml;
+import org.mule.runtime.extension.api.annotation.license.RequiresEntitlement;
 
 
 /**
@@ -12,6 +13,7 @@ import org.mule.runtime.extension.api.annotation.dsl.xml.Xml;
 @Xml(prefix = "olga--second")
 @Extension(name = "Olga--second")
 @Configurations(OlgasecondConfiguration.class)
+@RequiresEntitlement(name="Olga--second")
 public class OlgasecondExtension {
 
 }
